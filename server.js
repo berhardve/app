@@ -319,8 +319,8 @@ app.post('/raffles/:raffleId/register-winner', (req, res) => {
     });
 });
 
-// // Iniciar el servidor en el puerto 3000
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => {
-//   console.log(`Servidor corriendo en http://localhost:${port}`);
-// });
+// Iniciar el servidor en el puerto 3000
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Servidor corriendo en http://localhost:${port}`);
+});
