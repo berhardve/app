@@ -63,7 +63,7 @@ sequelize.sync({ force: false }) // Cambiar a true para reiniciar las tablas en 
   });
 
 // Rutas de la aplicación
-app.use(express.static(__dirname + '/public/raffle'));
+app.use(express.static(__dirname));
 
 // Crear una nueva rifa
 app.post('/raffles', (req, res) => {
