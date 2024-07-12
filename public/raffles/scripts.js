@@ -110,7 +110,7 @@ $(document).ready(function() {
 
     // Función para cargar las rifas desde el servidor
     function fetchRaffles() {
-        fetch('/raffles')
+        fetch('../raffles')
           .then(response => response.json())
           .then(raffles => {
             const raffleSelect = document.getElementById('raffle-id');
