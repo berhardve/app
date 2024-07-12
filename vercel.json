@@ -10,7 +10,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/public/raffle/index.html"
+        "dest": "/index.html"
       }
     ]
   }
