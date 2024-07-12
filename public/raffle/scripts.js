@@ -15,7 +15,7 @@ $(document).ready(function() {
         var maxAmountPerNumber = $('#max-amount-per-number').val();
 
         $.ajax({
-            url: '/raffles',
+            url: '/raffle/raffles',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ numbers: numCount, maxAmountPerNumber: maxAmountPerNumber }),
@@ -40,7 +40,7 @@ $(document).ready(function() {
         var buyerName = $('#buyerName').val();
 
         $.ajax({
-            url: '/raffles/' + raffleId + '/buy',
+            url: '/raffle/raffles/' + raffleId + '/buy',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ buyerName: buyerName, number: number, amountToBuy: amountToBuy }),
@@ -65,7 +65,7 @@ $(document).ready(function() {
         var winningNumber = $('#winning-number').val();
 
         $.ajax({
-            url: '/raffles/' + raffleId + '/winners',
+            url: '/raffle/raffles/' + raffleId + '/winners',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ number: winningNumber }),
@@ -87,7 +87,7 @@ $(document).ready(function() {
         var raffleId = $('#raffle-select-winner').val();
 
         $.ajax({
-            url: '/raffles/' + raffleId + '/winners',
+            url: '/raffle/raffles/' + raffleId + '/winners',
             method: 'GET',
             success: function(data) {
                 console.log('Listado de ganadores:', data);
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
     // Función para cargar las rifas desde el servidor
     function fetchRaffles() {
-        fetch('/raffles')
+        fetch('/raffle/raffles')
           .then(response => response.json())
           .then(raffles => {
             const raffleSelect = document.getElementById('raffle-id');
@@ -143,7 +143,7 @@ $(document).ready(function() {
 
         if (raffleId && number) {
             $.ajax({
-                url: '/raffles/' + raffleId + '/number/' + number + '/remaining',
+                url: '/raffle/raffles/' + raffleId + '/number/' + number + '/remaining',
                 method: 'GET',
                 success: function(data) {
                     $('#remaining-amount').val(data.remainingAmount);
