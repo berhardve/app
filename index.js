@@ -63,7 +63,7 @@ sequelize.sync({ force: false }) // Cambiar a true para reiniciar las tablas en 
   });
 
 // Rutas de la aplicación
-app.use(express.static(__dirname + ''));
+app.use(express.static(__dirname + '/public/raffle'));
 
 // Crear una nueva rifa
 app.post('/raffles', (req, res) => {
@@ -320,7 +320,7 @@ app.post('/raffles/:raffleId/register-winner', (req, res) => {
 });
 
 // Iniciar el servidor en el puerto 3000
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 });
