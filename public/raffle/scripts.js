@@ -97,7 +97,7 @@ $(document).ready(function() {
 
                 // Mostramos los ganadores en la lista
                 data.forEach(function(winner) {
-                    var listItem = `<li class="list-group-item"> Rifa: ${winner.raffleId} <br/> Nombre: ${winner.buyerName} <br/> Monto comprado: ${winner.amountBought}  </li>`;
+                    var listItem = `<li class="list-group-item"> Rifa: ${winner.raffleId}<br/> Numero Ganador: ${winner.number}  <br/> Nombre: ${winner.buyerName} <br/> Monto comprado: ${winner.amountBought}  </li>`;
                     $('#winners-list').append(listItem);
                 });
             },

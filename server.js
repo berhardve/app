@@ -7,8 +7,8 @@ const Sequelize = require('sequelize');
 app.use(bodyParser.json());
 
 // Configuración de Sequelize y conexión a MySQL
-const sequelize = new Sequelize('rafflex_app', 'root', 'inforever', {
-  host: 'localhost',
+const sequelize = new Sequelize('freedb_rafflex_app', 'freedb_berhard', 'ABGUt4x9eN5PJr&', {
+  host: 'sql.freedb.tech',
   dialect: 'mysql',
   logging: false // Para deshabilitar los logs SQL en la consola
 });
