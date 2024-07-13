@@ -11,10 +11,6 @@
     {
       "src": "/raffles/(.*)",
       "dest": "/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/raffle/index.html"
-    }
+    }    
   ]
 }
