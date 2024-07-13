@@ -15,7 +15,7 @@ $(document).ready(function() {
         var maxAmountPerNumber = $('#max-amount-per-number').val();
 
         $.ajax({
-            url: '/raffles',
+            url: '/raffle/raffles',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ numbers: numCount, maxAmountPerNumber: maxAmountPerNumber }),
@@ -40,7 +40,7 @@ $(document).ready(function() {
         var buyerName = $('#buyerName').val();
 
         $.ajax({
-            url: '/raffles/' + raffleId + '/buy',
+            url: '/raffle/raffles/' + raffleId + '/buy',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ number: number, amount: amountToBuy, buyerName: buyerName }),
@@ -66,7 +66,7 @@ $(document).ready(function() {
         var winningNumber = $('#winning-number').val();
 
         $.ajax({
-            url: '/raffles/' + raffleId + '/winners',
+            url: '/raffle/raffles/' + raffleId + '/winners',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ number: winningNumber }),
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
     function fetchRaffles() {
         $.ajax({
-            url: '/raffles',
+            url: '/raffle/raffles',
             method: 'GET',
             success: function(data) {
                 var raffleOptions = data.map(function(raffle) {
@@ -109,7 +109,7 @@ $(document).ready(function() {
 
     function fetchWinners(raffleId) {
         $.ajax({
-            url: '/raffles/' + raffleId + '/winners',
+            url: '/raffle/raffles/' + raffleId + '/winners',
             method: 'GET',
             success: function(data) {
                 var winnersList = data.map(function(winner) {
