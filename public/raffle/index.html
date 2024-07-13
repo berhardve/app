@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#CodigoJota | Aplicacion Rifa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="/public/raffle/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,21 +14,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Rifas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Comprar</a>
-                </li>
-            </ul> -->
         </div>
     </nav>
     <div class="container">
-        <!-- <h1 class="text-center">#CodigoJota | Rifa App</h1> -->
         <div class="row">
             <div class="col-md-6">
                 <h2>Crear Rifa</h2>
@@ -50,9 +37,7 @@
                 <form id="buy-raffle-form" class="mb-4">
                     <div class="form-group">
                         <label for="raffle-id">Seleccione la rifa</label>
-                        <select id="raffle-id" class="form-control">
-                            <!-- opciones de rifas disponibles se llenarán dinámicamente -->
-                        </select>
+                        <select id="raffle-id" class="form-control"></select>
                     </div>
                     <div class="form-group">
                         <label for="raffle-number">Número de rifa</label>
@@ -71,21 +56,18 @@
                         <input type="text" id="remaining-amount" class="form-control" disabled>
                     </div>
                     <div id="error-message" class="text-danger"></div>
-                    <button type="submit" class="btn btn-primary">Comprar</button>                    
+                    <button type="submit" class="btn btn-primary">Comprar</button>
                 </form>
             </div>
         </div>
 
-        <!-- Sección para registrar y mostrar ganadores -->
         <div class="row mt-5">
             <div class="col-md-6">
                 <h2>Registrar Ganador</h2>
                 <form id="register-winner-form" class="mb-4">
                     <div class="form-group">
                         <label for="raffle-select-winner">Seleccione la rifa</label>
-                        <select id="raffle-select-winner" class="form-control">
-                            <!-- opciones de rifas disponibles se llenarán dinámicamente -->
-                        </select>
+                        <select id="raffle-select-winner" class="form-control"></select>
                     </div>
                     <div class="form-group">
                         <label for="winning-number">Número Ganador</label>
@@ -97,15 +79,13 @@
             <div class="col-md-6">
                 <h2>Listado de Ganadores</h2>
                 <button id="show-winners-btn" class="btn btn-info">Mostrar Ganadores</button>
-                <ul id="winners-list" class="list-group mt-3">
-                    <!-- lista de ganadores se llenará dinámicamente -->
-                </ul>
+                <ul id="winners-list" class="list-group mt-3"></ul>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="/public/raffle/scripts.js"></script>
 </body>
 </html>

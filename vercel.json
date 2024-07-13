@@ -1,17 +1,24 @@
 {
-    "routes": [
-      {
-        "src": "/raffles",
-        "dest": "/index.js"
-      },
-      {
-        "src": "/raffles/:raffleId/winners",
-        "dest": "/index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/raffle/index.html"
-      }      
-    ]
-  }
-  
+  "routes": [
+    {
+      "src": "/raffles",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/raffles/:raffleId/winners",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/raffles/(.*)",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/raffle/index.html"
+    }
+  ]
+}
