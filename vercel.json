@@ -11,17 +11,7 @@
       {
         "src": "/(.*)",
         "dest": "/raffle/index.html"
-      }
-      ,
-      {
-        "src": "/scripts.js",
-        "dest": "/raffle/scripts.js"
-      }
-      ,
-      {
-        "src": "/style.css",
-        "dest": "/raffle/scripts.js"
-      }
+      }      
     ]
   }
   
