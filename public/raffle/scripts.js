@@ -15,7 +15,7 @@ $(document).ready(function() {
         var maxAmountPerNumber = $('#max-amount-per-number').val();
 
         $.ajax({
-            url: '/raffles',
+            url: '../../raffles',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ numbers: numCount, maxAmountPerNumber: maxAmountPerNumber }),
