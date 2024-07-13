@@ -1,16 +1,20 @@
 {
   "routes": [
     {
-      "src": "/raffles",
+      "src": "/raffle/raffles",
       "dest": "/index.js"
     },
     {
-      "src": "/raffles/:raffleId/winners",
+      "src": "/raffle/raffles/:raffleId/winners",
       "dest": "/index.js"
     },
     {
-      "src": "/raffles/(.*)",
+      "src": "/raffle/raffles/(.*)",
       "dest": "/index.js"
-    }    
+    },
+    {
+      "src": "/raffle",
+      "dest": "/raffle/index.html"
+    }   
   ]
 }
